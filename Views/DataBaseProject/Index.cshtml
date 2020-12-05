@@ -1,0 +1,154 @@
+﻿@model APIproject.Models.usr_login
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-image: url('/img/image1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<div class="text-center">
+    <section>
+        <table width="100%" height="15%" border="0">
+            <tbody>
+                <tr align="center">
+                    <td><h1>LOGIN | SIGN-UP </h1></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+<br />
+<br />
+
+<div class="text-center">
+    <section>
+        @using (Html.BeginForm("Plan", "DataBaseProject", FormMethod.Post))
+        {
+            <table border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td width="152">Login UserName</td>
+                        <td width="152"><input type="text" name="user1" id="user1"></td>
+                        <td><input type="hidden" id="destination" name="destination"></td>
+                    </tr>
+                    <tr>
+                        <td>Login Password</td>
+                        <td><input type="password" name="password1" id="password1"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" name="reset" id="reset" value="Reset"></td>
+                        <td><input name="submit" type="submit" id="submit" value="Login"></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        }
+    </section>
+</div>
+<br />
+<br />
+
+<div class="text-center">
+    <section>
+        <table width="100%" height="15%" border="0">
+            <tr align="center">
+                <td width="152"><h3>New User Please Create Credential.</h3></td>
+            </tr>
+        </table>
+    </section>
+</div>
+
+
+
+<div class="text-center">
+    <section>
+        @using (Html.BeginForm("CreateLogin", "DataBaseProject", FormMethod.Post))
+        {
+            <table border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td width="152">User Name</td>
+                        <td width="152"><input type="text" name="userName" id="userName"></td>
+                        <td width="18">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="152">Password*</td>
+                        <td width="152"><input type="password" name="password" id="password"></td>
+                        <td width="18">&nbsp;</td>
+                    </tr>
+                    <tr>
+
+                        <td width="152">Email</td>
+                        <td width="152"><input type="text" name="email" id="email"></td>
+                        <td width="18">&nbsp;</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <br />
+            <br />
+            <b>Below Fields are Optional, Used for reseach only</b>
+            <br />
+
+            <table border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td width="152">Phone</td>
+                        <td width="152"><input type="text" name="phone" id="phone"></td>
+                        <td width="18">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="152">Age</td>
+                        <td width="152"><input type="number" name="age" id="age"></td>
+                        <td width="18">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="152">Gender</td>
+                        <td width="152"><input type="text" name="gender" id="gender"></td>
+                        <td width="18">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="152">Education</td>
+                        <td width="152"><input type="text" name="education" id="education"></td>
+                        <td width="18">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="reset" name="reset" id="reset" value="Reset"></td>
+                        <td><input name="submit" type="submit" id="submit" value="Create Login"></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        }
+    </section>
+</div>
+<br />
+<br />
+<div class="text-center">
+    <section>
+        <table width="100%" height="15%" border="0">
+            <tr align="center">
+                <td width="152"><h3>@ViewBag.MandatoryCheck</h3></td>
+            </tr>
+        </table>
+    </section>
+</div>
+</html>
